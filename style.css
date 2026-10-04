@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #d1d1d1;
+}
+
+
+/* =====================================
+   SCROLL AREA
+===================================== */
+
+.hero-section {
+    position: relative;
+    height: 200vh;
+    background: #d1d1d1;
+}
+
+
+/* =====================================
+   STICKY SCREEN
+===================================== */
+
+.sticky-hero {
+    position: sticky;
+    top: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #d1d1d1;
+
+    overflow: hidden;
+}
+
+
+/* =====================================
+   HEADLINE
+===================================== */
+
+.headline {
+    position: absolute;
+
+    top: 55px;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #111;
+
+    font-size: clamp(32px, 4.5vw, 64px);
+
+    font-weight: 900;
+
+    letter-spacing: 0.45rem;
+
+    white-space: nowrap;
+
+    z-index: 20;
+}
+
+.headline-letter {
+    display: inline-block;
+    opacity: 1;
+}
+
+.headline-space {
+    width: 25px;
+}
+
+
+/* =====================================
+   ROAD
+===================================== */
+
+.road-track {
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 100vw;
+    height: 200px;
+
+    background: #1e1e1e;
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+
+/* =====================================
+   GREEN TRAIL
+===================================== */
+
+.trail {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 200px;
+
+    background: #45db7d;
+
+    z-index: 1;
+}
+
+
+/* =====================================
+   CAR
+===================================== */
+
+.car-image {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    height: 200px;
+    width: auto;
+
+    z-index: 10;
+
+    display: block;
+
+    will-change: transform;
+}
+
+
+/* =====================================
+   STATS
+===================================== */
+
+.stats-container {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 35px;
+
+    padding: 0 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    z-index: 30;
+}
+
+
+/* =====================================
+   STAT CARD
+===================================== */
+
+.stat-card {
+    width: 190px;
+    min-height: 120px;
+
+    padding: 22px;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+}
+
+
+/* Card colors */
+
+#box1 {
+    background: #def54f;
+    color: #111;
+}
+
+#box2 {
+    background: #6ac9ff;
+    color: #111;
+}
+
+#box3 {
+    background: #333;
+    color: #fff;
+}
+
+#box4 {
+    background: #fa7328;
+    color: #111;
+}
+
+
+.stat-number {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-text {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .headline {
+        top: 40px;
+        font-size: 24px;
+        letter-spacing: 0.22rem;
+    }
+
+    .headline-space {
+        width: 10px;
+    }
+
+    .road-track {
+        height: 150px;
+    }
+
+    .trail {
+        height: 150px;
+    }
+
+    .car-image {
+        height: 150px;
+    }
+
+    .stats-container {
+        padding: 0 12px;
+        gap: 8px;
+    }
+
+    .stat-card {
+        width: 23%;
+        min-height: 90px;
+        padding: 10px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .stat-text {
+        font-size: 9px;
+    }
+}
